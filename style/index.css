@@ -1,0 +1,31 @@
+body {
+    background-image: url('/assets/Background1.jpg'); 
+    background-size: cover; 
+    background-position: center;
+    margin: 0; 
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+}
+
+.Foto1 {
+    margin-right: 20px; 
+    border-radius: 60px;
+    animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.3; }
+    100% { opacity: 1; }
+}
+
+.info {
+    flex-grow: 1;
+}
+
+.Bio1, .Cerita1 {
+    color: aqua;
+}
