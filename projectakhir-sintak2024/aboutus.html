@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+
+    <link rel="stylesheet" href="/style/aboutus.css">
+</head>
+<body>
+
+            <script>
+                window.onload = function() {
+                    alert("Bagian ini berisikan cerita singkat tentang kami.");
+                };
+            </script>
+            
+                <!-- navbar -->
+                <nav class="navbar">
+                    <div class="navbar-left">
+                        <img src="/assets/onlyicon.png" alt="Website Icon" class="navbar-icon">
+                        <span class="navbar-name">HappyShopping</span>
+                    </div>
+                    <div class="navbar-right">
+                        <a href="/home.html" class="navbar-link" id="home-link">Home</a>
+                        <a href="/product.html" class="navbar-link" id="product-link">Product</a>
+                        <a href="/product.html" class="navbar-link" id="promo-link">Promo</a>
+                        <a href="/aboutus.html" class="navbar-link" id="about-link">About us</a>
+                    </div>
+                </nav>
+                
+                <!-- js confirmation -->
+                <script>
+                    // Function to show confirmation dialog
+                    function showConfirmation(message) {
+                        return confirm(message);
+                    }
+                    document.getElementById('home-link').addEventListener('click', function(event) {
+                        let confirmed = showConfirmation('Apakah Anda yakin ingin menuju ke halaman Home?');
+                        if (!confirmed) {
+                            event.preventDefault(); 
+                        }
+                    });
+            
+                    document.getElementById('product-link').addEventListener('click', function(event) {
+                        let confirmed = showConfirmation('Apakah Anda yakin ingin menuju ke halaman Product?');
+                        if (!confirmed) {
+                            event.preventDefault(); 
+                        }
+                    });
+            
+                    document.getElementById('promo-link').addEventListener('click', function(event) {
+                        let confirmed = showConfirmation('Apakah Anda yakin ingin menuju ke halaman Promo?');
+                        if (!confirmed) {
+                            event.preventDefault(); 
+                        }
+                    });
+            
+                    document.getElementById('about-link').addEventListener('click', function(event) {
+                        let confirmed = showConfirmation('Apakah Anda yakin ingin menuju ke halaman About us?');
+                        if (!confirmed) {
+                            event.preventDefault(); 
+                        }
+                    });
+                </script>
+                
+
+    <!-- Halaman About Us -->
+    <div class="heading">
+        <h1>About Us</h1>
+        <p>Perjalanan Happy Shopping bersama para Seller dan Customer</p>
+    </div>
+    <div class="container">
+        <section class="about">
+            <div class="about-image">
+                <img src="/assets/about-image.jpg" alt="">
+            </div>
+            <div class="about-content">
+                <p>Happy Shopping adalah sebuah e-commerce yang berdiri dengan visi untuk menyediakan pengalaman belanja online yang menyenangkan dan memuaskan bagi pelanggan. Sejak awal berdirinya, Happy Shopping telah fokus pada memberikan layanan terbaik, produk berkualitas, dan harga yang kompetitif. 
+                    Dibangun dengan semangat untuk memberikan kemudahan bagi konsumen dalam mendapatkan produk berkualitas tanpa harus keluar rumah, Happy Shopping terus berkembang dan menjadi salah satu destinasi belanja online terpercaya. Dengan komitmen pada kepuasan pelanggan dan inovasi dalam layanan, 
+                    Happy Shopping terus tumbuh dan menjadi pilihan utama bagi banyak orang dalam memenuhi kebutuhan belanja online mereka.</p>
+            </div>
+        </section>
+    </div>
+
+    
+</body>
+</html>

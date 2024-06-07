@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product</title>
+
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Bootstrap JS Bundle -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+        <!-- Font Awesome -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/style/product.css">
+
+</head>
+<body>
+    <script>
+        window.onload = function() {
+            alert("Pada bagian Product ini kalian bisa memilih produk yang ingin dibeli.");
+        };
+    </script>
+    
+        <!-- navbar -->
+        <nav class="navbar">
+            <div class="navbar-left">
+                <img src="/assets/onlyicon.png" alt="Website Icon" class="navbar-icon">
+                <span class="navbar-name">Product</span>
+            </div>
+            <div class="navbar-right">
+                <a href="/home.html" class="navbar-link" id="home-link">Home</a>
+                <a href="/product.html" class="navbar-link" id="product-link">Product</a>
+                <a href="/promo.html" class="navbar-link" id="promo-link">Promo</a>
+                <a href="/aboutus.html" class="navbar-link" id="about-link">About us</a>
+            </div>
+        </nav>
+        
+        <!-- js confirmation -->
+        <script>
+            // Function to show confirmation dialog
+            function showConfirmation(message) {
+                return confirm(message);
+            }
+            document.getElementById('home-link').addEventListener('click', function(event) {
+                let confirmed = showConfirmation('Apakah Anda yakin ingin menuju ke halaman Home?');
+                if (!confirmed) {
+                    event.preventDefault(); // Prevent default action if user cancels
+                }
+            });
+    
+            document.getElementById('product-link').addEventListener('click', function(event) {
+                let confirmed = showConfirmation('Apakah Anda yakin ingin menuju ke halaman Product?');
+                if (!confirmed) {
+                    event.preventDefault(); // Prevent default action if user cancels
+                }
+            });
+    
+            document.getElementById('promo-link').addEventListener('click', function(event) {
+                let confirmed = showConfirmation('Apakah Anda yakin ingin menuju ke halaman Promo?');
+                if (!confirmed) {
+                    event.preventDefault(); // Prevent default action if user cancels
+                }
+            });
+    
+            document.getElementById('about-link').addEventListener('click', function(event) {
+                let confirmed = showConfirmation('Apakah Anda yakin ingin menuju ke halaman About us?');
+                if (!confirmed) {
+                    event.preventDefault(); // Prevent default action if user cancels
+                }
+            });
+        </script>
+        
+<!-- navbar2 -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light second-navbar">
+    <div class="container">
+        <div class="row w-100">
+            <div class="col-12 d-flex justify-content-start align-items-center">
+                <span class="product-label" style="margin-top: 80px;"></span> <!-- Tulisan "Product" berada di sini -->
+                <div class="input-group mb-3 search-input-group">
+                    <input type="text" class="form-control" placeholder="Cari di Happy Shopping" aria-label="Cari di Happy Shopping" aria-describedby="button-addon2">
+                    <button class="btn btn-outline-secondary search-btn" type="button" id="button-addon2">
+                        <i class="fas fa-search"></i> Cari
+                    </button>
+                </div>
+            </div>
+            <div class="col-12 d-flex justify-content-end align-items-center">
+                <!-- Icon keranjang -->
+                <button class="btn btn-outline-secondary me-2 small-btn" type="button" onclick="showAlert('Keranjang')">
+                    <i class="fas fa-shopping-cart"></i> Keranjang
+                </button>
+                <!-- Icon disukai -->
+                <button class="btn btn-outline-secondary small-btn" type="button" onclick="showAlert('Disukai')">
+                    <i class="fas fa-heart"></i> Disukai
+                </button>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+    
+    <script>
+        function showAlert(item) {
+            alert("Anda harus login terlebih dahulu untuk memilih opsi " + item + "!");
+        }
+    </script>
+
+    <section id="product-section" class="product-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-3">
+                    <div class="card">
+                        <img src="/assets/product/IMG_2828.JPG" class="card-img-top" alt="Gambar Produk 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Kemeja</h5>
+                            <p class="card-text">Ini merupakan produk yang dibuat di dalam negeri dan ini merupakan produk lokal yang kualitasnya tidak kalah dengan produk luar lainnya.</p>
+                            <h5>Rp150.000</h5><br>
+                            <a href="#" class="btn btn-primary" style="background-color: #77B0AA;" onclick="alert('Anda harus login terlebih dahulu untuk melakukannya!');">Beli Sekarang</a>
+                            <a href="#" class="btn btn-primary" onclick="alert('Anda harus login terlebih dahulu untuk melakukannya!');">+ Keranjang</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card">
+                        <img src="/assets/product/IMG_2829.JPG" class="card-img-top" alt="Gambar Produk 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Sepatu</h5>
+                            <p class="card-text">Ini merupakan produk yang dibuat di dalam negeri dan ini merupakan produk lokal yang kualitasnya tidak kalah dengan produk luar lainnya.</p>
+                            <h5>Rp110.000</h5><br>
+                            <a href="#" class="btn btn-primary" style="background-color: #77B0AA;" onclick="alert('Anda harus login terlebih dahulu untuk melakukannya!');">Beli Sekarang</a>
+                            <a href="#" class="btn btn-primary" onclick="alert('Anda harus login terlebih dahulu untuk melakukannya!');">+ Keranjang</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card">
+                        <img src="/assets/product/IMG_2830.JPG" class="card-img-top" alt="Gambar Produk 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Tas</h5>
+                            <p class="card-text">Ini merupakan produk yang dibuat di dalam negeri dan ini merupakan produk lokal yang kualitasnya tidak kalah dengan produk luar lainnya.</p>
+                            <h5>Rp120.000</h5><br>
+                            <a href="#" class="btn btn-primary" style="background-color: #77B0AA;" onclick="alert('Anda harus login terlebih dahulu untuk melakukannya!');">Beli Sekarang</a>
+                            <a href="#" class="btn btn-primary" onclick="alert('Anda harus login terlebih dahulu untuk melakukannya!');">+ Keranjang</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card">
+                        <img src="/assets/product/IMG_2831.JPG" class="card-img-top" alt="Gambar Produk 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Meja Belajar</h5>
+                            <p class="card-text">Ini merupakan produk yang dibuat di dalam negeri dan ini merupakan produk lokal yang kualitasnya tidak kalah dengan produk luar lainnya.</p>
+                            <h5>Rp180.000</h5><br>
+                            <a href="#" class="btn btn-primary" style="background-color: #77B0AA;" onclick="alert('Anda harus login terlebih dahulu untuk melakukannya!');">Beli Sekarang</a>
+                            <a href="#" class="btn btn-primary" onclick="alert('Anda harus login terlebih dahulu untuk melakukannya!');">+ Keranjang</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card">
+                        <img src="/assets/product/IMG_2832.JPG" class="card-img-top" alt="Gambar Produk 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Iphone</h5>
+                            <p class="card-text">Ini merupakan produk luar namun yang dibuat di dalam negeri dan ini merupakan produk lokal yang kualitasnya tidak kalah bagus.</p>
+                            <h5>Rp9.200.000</h5><br>
+                            <a href="#" class="btn btn-primary" style="background-color: #77B0AA;" onclick="alert('Anda harus login terlebih dahulu untuk melakukannya!');">Beli Sekarang</a>
+                            <a href="#" class="btn btn-primary" onclick="alert('Anda harus login terlebih dahulu untuk melakukannya!');">+ Keranjang</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card">
+                        <img src="/assets/product/IMG_2833.JPG" class="card-img-top" alt="Gambar Produk 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Cermin</h5>
+                            <p class="card-text">Ini merupakan produk yang dibuat di dalam negeri dan ini merupakan produk lokal yang kualitasnya tidak kalah dengan produk luar lainnya.</p>
+                            <h5>Rp100.000</h5><br>
+                            <a href="#" class="btn btn-primary" style="background-color: #77B0AA;" onclick="alert('Anda harus login terlebih dahulu untuk melakukannya!');">Beli Sekarang</a>
+                            <a href="#" class="btn btn-primary" onclick="alert('Anda harus login terlebih dahulu untuk melakukannya!');">+ Keranjang</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card">
+                        <img src="/assets/product/IMG_2834.JPG" class="card-img-top" alt="Gambar Produk 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Kaos Kaki</h5>
+                            <p class="card-text">Ini merupakan produk yang dibuat di dalam negeri dan ini merupakan produk lokal yang kualitasnya tidak kalah dengan produk luar lainnya.</p>
+                            <h5>Rp50.000</h5><br>
+                            <a href="#" class="btn btn-primary" style="background-color: #77B0AA;" onclick="alert('Anda harus login terlebih dahulu untuk melakukannya!');">Beli Sekarang</a>
+                            <a href="#" class="btn btn-primary" onclick="alert('Anda harus login terlebih dahulu untuk melakukannya!');">+ Keranjang</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card">
+                        <img src="/assets/product/IMG_2835.JPG" class="card-img-top" alt="Gambar Produk 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Jaket</h5>
+                            <p class="card-text">Ini merupakan produk yang dibuat di dalam negeri dan ini merupakan produk lokal yang kualitasnya tidak kalah dengan produk luar lainnya.</p>
+                            <h5>Rp150.000</h5><br>
+                            <a href="#" class="btn btn-primary" style="background-color: #77B0AA;" onclick="alert('Anda harus login terlebih dahulu untuk melakukannya!');">Beli Sekarang</a>
+                            <a href="#" class="btn btn-primary" onclick="alert('Anda harus login terlebih dahulu untuk melakukannya!');">+ Keranjang</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--footer-->
+    <footer class="text-center text-white" style="background-color: #0a4275;">
+        <div class="container p-4 pb-0">
+          <section class="">
+            <p class="d-flex justify-content-center align-items-center">
+              <span class="me-3">Mempunyai saran tentang website ini?</span>
+              <button data-mdb-ripple-init type="button" class="btn btn-outline-light btn-rounded" onclick="berikanSaran()">
+                Berikan saran anda!
+            </button>
+            </p>
+          </section>
+        </div>
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+          © 2024 Copyright:
+          <a class="text-white" href="https://mdbootstrap.com/">Happy Shopping</a>
+        </div>
+      </footer>
+
+      <script>
+        function berikanSaran() {
+            let saran = prompt("Silakan berikan saran Anda tentang website ini:");
+            if (saran !== null && saran !== "") {
+                alert("Terima kasih atas masukan Anda!");
+                // Di sini Anda dapat menambahkan kode untuk memproses saran yang diberikan pengguna
+            } else {
+                alert("Anda membatalkan pengiriman saran.");
+            }
+        }
+    </script>
+</body>
+</html>
